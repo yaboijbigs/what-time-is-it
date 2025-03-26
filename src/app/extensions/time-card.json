@@ -1,0 +1,15 @@
+{
+  "type": "crm-card",
+  "data": {
+    "title": "What Time Is It?",
+    "uid": "what-time-is-it-card",
+    "location": "crm.record.sidebar",
+    "module": {
+      "file": "time-card.jsx"
+    },
+    "objectTypes": [
+      { "name": "contacts" },
+      { "name": "companies" }
+    ]
+  }
+} 

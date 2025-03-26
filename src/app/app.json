@@ -1,0 +1,19 @@
+{
+  "name": "What Time Is It?",
+  "description": "Displays the current time for a contact or company based on their timezone",
+  "uid": "what-time-is-it-app",
+  "scopes": [
+    "crm.objects.contacts.read",
+    "crm.objects.companies.read"
+  ],
+  "public": false,
+  "extensions": {
+    "crm": {
+      "cards": [
+        {
+          "file": "extensions/time-card.json"
+        }
+      ]
+    }
+  }
+}

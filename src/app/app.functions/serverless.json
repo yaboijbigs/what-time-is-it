@@ -1,0 +1,8 @@
+{
+    "appFunctions": {
+      "getContactData": {
+        "file": "getContactData.js",
+        "secrets": []
+      }
+    }
+  }

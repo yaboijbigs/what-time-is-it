@@ -1,0 +1,10 @@
+{
+  "name": "time-card-extension",
+  "version": "1.0.0",
+  "description": "Time card extension for HubSpot",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@hubspot/ui-extensions": "^0.8.47"
+  }
+}
