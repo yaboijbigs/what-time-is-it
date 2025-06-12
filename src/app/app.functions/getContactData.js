@@ -211,6 +211,9 @@ exports.main = async (context = {}) => {
     } else if (objectType === 'companies') {
       properties.push('name', 'timezone');
       timezoneProperty = 'timezone';
+    } else if (objectType === 'tickets') {
+      properties.push('subject', 'timezone');
+      timezoneProperty = 'timezone';
     } else {
       return {
         message: `Unsupported object type: ${objectType}`,
@@ -229,6 +232,11 @@ exports.main = async (context = {}) => {
         );
       } else if (objectType === 'companies') {
         response = await hubspotClient.crm.companies.basicApi.getById(
+          hs_object_id,
+          properties
+        );
+      } else if (objectType === 'tickets') {
+        response = await hubspotClient.crm.tickets.basicApi.getById(
           hs_object_id,
           properties
         );
@@ -264,8 +272,10 @@ exports.main = async (context = {}) => {
     if (objectType === 'contacts') {
       displayName = `${response.properties.firstname || ''} ${response.properties.lastname || ''}`.trim();
       if (!displayName) displayName = 'Unknown Contact';
-    } else {
+    } else if (objectType === 'companies') {
       displayName = response.properties.name || 'Unknown Company';
+    } else if (objectType === 'tickets') {
+      displayName = response.properties.subject || 'Unknown Ticket';
     }
     
     return {

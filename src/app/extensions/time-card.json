@@ -8,8 +8,7 @@
       "file": "time-card.jsx"
     },
     "objectTypes": [
-      { "name": "contacts" },
-      { "name": "companies" }
+      { "name": "tickets" }
     ]
   }
 } 

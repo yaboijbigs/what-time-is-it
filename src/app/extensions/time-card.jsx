@@ -31,10 +31,11 @@ const TimeCard = ({ context }) => {
         const objectTypeId = context?.crm?.objectTypeId;
         const objectId = context?.crm?.objectId;
         
-        // Determine if we're looking at a contact or company
+        // Determine if we're looking at a contact, company, or ticket
         let objectType = 'unknown';
         if (objectTypeId === '0-1') objectType = 'contacts';
         else if (objectTypeId === '0-2') objectType = 'companies';
+        else if (objectTypeId === '0-5') objectType = 'tickets';
         
         setObjectDetails({
           objectType,
