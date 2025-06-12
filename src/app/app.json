@@ -4,7 +4,8 @@
   "uid": "what-time-is-it-app",
   "scopes": [
     "crm.objects.contacts.read",
-    "crm.objects.companies.read"
+    "crm.objects.companies.read",
+    "tickets"
   ],
   "public": false,
   "extensions": {
