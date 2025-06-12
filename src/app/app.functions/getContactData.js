@@ -213,7 +213,7 @@ exports.main = async (context = {}) => {
       timezoneProperty = 'timezone';
     } else if (objectType === 'tickets') {
       properties.push('subject', 'timezone');
-      timezoneProperty = 'timezone';
+      timezoneProperty = 'time_zone__';
     } else {
       return {
         message: `Unsupported object type: ${objectType}`,
